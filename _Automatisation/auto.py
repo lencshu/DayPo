@@ -459,8 +459,8 @@ if modeSwitch and int(ifhexo):
 		mdSimReplace = mdSimReplace.replace(keyCircle,'')
 		mdSimReplace = re.sub(r"{:height=\"\d+px\" width=\"\d+px\"}</p>", '' ,mdSimReplace)
 		mdSimReplace = mdSimReplace.replace('</p>','')
-		print mdImagesPathdel
-		mdSimReplace = mdSimReplace.replace('mdImagesPathdel','')
+		# print mdImagesPathdel
+		mdSimReplace = mdSimReplace.replace(mdImagesPathdel,'')
 		mdSimReplace = mdSimReplace.replace("[TOC]\n\n---",'---')
 		file = open('temp.md', 'w')
 		file.write(mdSimReplace)
