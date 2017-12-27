@@ -124,12 +124,13 @@ def confReadOrAdd(section,option):
         confAuto.add_section(section)
         print "Enter the valur of",option,':'
         value = raw_input()
-        confAuto.set(section, value, value)
+        confAuto.set(section, option, value)
         confAuto.write(open('auto.ini', 'w'))
     except ConfigParser.NoOptionError:
         print "Enter the valur of",option,':'
         value = raw_input()
-        confAuto.set(section, value, value)
+		# confAuto.set("HTML", "ifpwd",ifpwd)
+        confAuto.set(section, option, value)
         confAuto.write(open('auto.ini', 'w'))
     return value
 
